@@ -3,7 +3,7 @@
   "displayName": "Tool Box Demo",
   "version": "0.0.1",
   "unity": "2018.1",
-  "description": "Ceci est ma description"
+  "description": "Ceci est ma description",
   "keywords": ["Script","Tool"],
   "category": "Script",
   "dependencies":{}

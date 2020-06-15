@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RotateEditor : MonoBehaviour
 {
+
+    Rotate test;
     // Start is called before the first frame update
     void Start()
     {

@@ -14,6 +14,6 @@ public class UnshowRenderer : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Renderer>().enabled = !m_isDebug;
+        GetComponent<Renderer>().enabled = m_isDebug;
     }
 }

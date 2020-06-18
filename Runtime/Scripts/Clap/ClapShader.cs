@@ -35,7 +35,7 @@ public class ClapShader : MonoBehaviour
 
         if (m_shaderMaterial != null)
         {
-            foreach (ShaderTag shTag in ShaderTag.ListObjectToWireframe)
+            foreach (ShaderTagMaterialManager shTag in ShaderTagMaterialManager.ListObjectToWireframe)
             {
                 shTag.ChangeMaterial(m_shaderMaterial);
             }
@@ -45,7 +45,7 @@ public class ClapShader : MonoBehaviour
     private void EndShaderShowed()
     {
         m_shaderShowed = false;
-        foreach(ShaderTag shTag in ShaderTag.ListObjectToWireframe)
+        foreach(ShaderTagMaterialManager shTag in ShaderTagMaterialManager.ListObjectToWireframe)
         {
             shTag.ResetMaterial();
         }

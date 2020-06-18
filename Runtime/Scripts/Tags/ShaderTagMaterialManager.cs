@@ -2,10 +2,10 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
-public class ShaderTag : MonoBehaviour
+public class ShaderTagMaterialManager : MonoBehaviour
 {
 
-    public static List<ShaderTag> ListObjectToWireframe = new List<ShaderTag>();
+    public static List<ShaderTagMaterialManager> ListObjectToWireframe = new List<ShaderTagMaterialManager>();
 
 
     private void Awake()

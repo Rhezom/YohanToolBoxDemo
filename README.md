@@ -14,7 +14,7 @@ dès le start avec une valeur : IsDebug. Si tu le coche, le mesh renderer est vis
 
 
 SHADER :
-- Chaque objet de la scène dont leur material doivent devenir en Wireframe doivent avoir le script : ShaderTag
+- Chaque objet de la scène dont leur material doivent devenir en Wireframe doivent avoir le script : ShaderTagMaterialManager
 - Tu trouveras 4 materials wireframe dans le dossier Wireframe/example/material
 
 

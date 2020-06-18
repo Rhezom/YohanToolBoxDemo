@@ -1,8 +1,6 @@
 {
     "name": "be.rhezom.toolboxdemo.Runtime",
-    "references": [
-        ""
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

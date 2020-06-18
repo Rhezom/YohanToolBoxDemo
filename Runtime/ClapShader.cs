@@ -32,11 +32,23 @@ public class ClapShader : MonoBehaviour
         m_shaderShowed = true;
         m_shaderRequested = false;
         m_currentTime = 0f;
+
+        if (m_shaderMaterial != null)
+        {
+            foreach (ShaderTag shTag in ShaderTag.ListObjectToWireframe)
+            {
+                shTag.ChangeMaterial(m_shaderMaterial);
+            }
+        }
     }
 
     private void EndShaderShowed()
     {
         m_shaderShowed = false;
+        foreach(ShaderTag shTag in ShaderTag.ListObjectToWireframe)
+        {
+            shTag.ResetMaterial();
+        }
     }
 
     #endregion
@@ -45,6 +57,9 @@ public class ClapShader : MonoBehaviour
 
     [SerializeField]
     float m_timeOfShaderShowed;
+
+    [SerializeField]
+    Material m_shaderMaterial;
 
     float m_currentTime;
 

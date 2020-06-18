@@ -4,7 +4,7 @@
 [RequireComponent(typeof(ClapController))]
 public class ClapShader : MonoBehaviour
 {
-
+    #region Unity Method
 
     private void Update()
     {
@@ -16,7 +16,10 @@ public class ClapShader : MonoBehaviour
             m_currentTime += Time.deltaTime;
     }
 
+    #endregion
 
+
+    #region Own Method
 
     public void ChangeShaderRequestAction()
     {
@@ -36,6 +39,7 @@ public class ClapShader : MonoBehaviour
         m_shaderShowed = false;
     }
 
+    #endregion
 
     #region Private Members
 

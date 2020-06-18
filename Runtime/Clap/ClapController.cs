@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 
 public class ClapController : MonoBehaviour
@@ -51,7 +49,7 @@ public class ClapController : MonoBehaviour
             SetLastDistance();
         }
         else
-            throw new System.Exception("Other Controller is null.");
+            throw new System.Exception("Other Controller is null");
     }
 
 

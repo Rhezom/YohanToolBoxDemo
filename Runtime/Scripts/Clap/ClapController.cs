@@ -43,13 +43,13 @@ public class ClapController : MonoBehaviour
     #region Own Method
     private void SetDistanceBetweenTwoControllers()
     {
-        if (m_otherController != null)
+        if (m_firstController != null && m_secondController)
         {
-            transform.position.GetDistanceOptimized(m_otherController.position, out m_distanceBetweenTwoControllers);
+            m_firstController.position.GetDistanceOptimized(m_secondController.position, out m_distanceBetweenTwoControllers);
             SetLastDistance();
         }
         else
-            throw new System.Exception("Other Controller is null");
+            throw new System.Exception("First controller or/and Second controler variable is/are null. Please, check inspector variable");
     }
 
 
@@ -92,7 +92,10 @@ public class ClapController : MonoBehaviour
     float m_minDistanceForClapping;
 
     [SerializeField]
-    Transform m_otherController;
+    Transform m_firstController;
+
+    [SerializeField]
+    Transform m_secondController;
 
     [SerializeField]
     float m_timeBetweenSetLastDistance;

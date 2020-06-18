@@ -2,8 +2,7 @@
 
 
 CLAP :
-- ClapController ==> Soit sur la manette droite, soit sur la manette gauche
-- Ne pas oublier de mettre l'autre manette dans la variable inspector : Other Controller
+- ClapController ==> Sur n'importe quel gameObject. Ne pas oublié de mettre le FirstController et le SecondController
 - Une variable "Set Time Between Set Last Distance" permet de ne pas set la valeur à toutes les frames ( Optimisation :P ).
 - La vitesse est une moyenne calculée grâce à la distance parcourue suivant le temps écoulé ( Remis à 0 à chaque SetLastDistance )
 

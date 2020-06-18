@@ -238,8 +238,6 @@ GameObject:
   - component: {fileID: 14401859}
   - component: {fileID: 14401864}
   - component: {fileID: 14401863}
-  - component: {fileID: 14401862}
-  - component: {fileID: 14401861}
   - component: {fileID: 14401860}
   m_Layer: 0
   m_Name: Left
@@ -275,62 +273,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_isDebug: 1
---- !u!114 &14401861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14401858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9e7621d3c807c45a1567e78d1e0aa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_timeOfShaderShowed: 2
-  m_shaderMaterial: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
---- !u!114 &14401862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14401858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b5cdf4102566014cb9ba2c37b6949fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActiveDebug: 0
-  ControllerClappingEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 107617756}
-        m_MethodName: PlayParticle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 14401861}
-        m_MethodName: ChangeShaderRequestAction
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  m_minVelocityForClapping: 30
-  m_minDistanceForClapping: 0.5
-  m_otherController: {fileID: 396714798}
-  m_timeBetweenSetLastDistance: 0.5
 --- !u!23 &14401863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1037,6 +979,95 @@ Transform:
   - {fileID: 107617754}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1407874142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1407874145}
+  - component: {fileID: 1407874144}
+  - component: {fileID: 1407874143}
+  m_Layer: 0
+  m_Name: ClapControler_Shader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1407874143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407874142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9e7621d3c807c45a1567e78d1e0aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_timeOfShaderShowed: 2
+  m_shaderMaterial: {fileID: 2100000, guid: e563d2611df3e984e92203420188c3ee, type: 2}
+--- !u!114 &1407874144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407874142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5cdf4102566014cb9ba2c37b6949fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveDebug: 0
+  ControllerClappingEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 107617756}
+        m_MethodName: PlayParticle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1407874143}
+        m_MethodName: ChangeShaderRequestAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_minVelocityForClapping: 30
+  m_minDistanceForClapping: 0.5
+  m_firstController: {fileID: 14401859}
+  m_secondController: {fileID: 396714798}
+  m_timeBetweenSetLastDistance: 0.5
+--- !u!4 &1407874145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407874142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1757376934
 GameObject:

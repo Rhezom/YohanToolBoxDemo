@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
@@ -11,7 +12,10 @@ public class ShaderTagMaterialManager : MonoBehaviour
     private void Awake()
     {
         m_objectRenderer = GetComponent<Renderer>();
-        m_defaultMaterial = m_objectRenderer.material;
+
+        int length = m_objectRenderer.materials.Length;
+        m_defaultMaterials = new Material[length];
+        Array.Copy(m_objectRenderer.materials, m_defaultMaterials, m_objectRenderer.materials.Length);
     }
 
     void Start()
@@ -27,19 +31,19 @@ public class ShaderTagMaterialManager : MonoBehaviour
 
     public void ChangeMaterial(Material newMaterial)
     {
+        m_objectRenderer.materials = new Material[1];
         m_objectRenderer.material = newMaterial;
-
     }
 
     public void ResetMaterial()
     {
-        m_objectRenderer.material = m_defaultMaterial;
+        m_objectRenderer.materials = m_defaultMaterials;
     }
 
     #region Private Members
 
     private Renderer m_objectRenderer;
-    private Material m_defaultMaterial;
+    private Material[] m_defaultMaterials;
 
     #endregion
 }
